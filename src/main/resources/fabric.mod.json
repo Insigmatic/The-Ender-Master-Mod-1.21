@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "theendermaster",
+	"version": "${version}",
+	"name": "The Ender Master",
+	"description": "The final boss of Minecraft...",
+	"authors": [
+		"Insigmatic"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/theendermaster/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.insigmatic.theendermaster.TheEnderMaster"
+		],
+		"fabric-datagen": [
+			"net.insigmatic.theendermaster.TheEnderMasterDataGenerator"
+		],
+        "client": [
+          "net.insigmatic.theendermaster.TheEnderMasterClient"
+        ]
+	},
+	"mixins": [
+		"theendermaster.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
